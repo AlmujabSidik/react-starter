@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../../components/ui/button";
 
 function CardUserProfile({ user }) {
@@ -11,7 +12,9 @@ function CardUserProfile({ user }) {
           <p>Account : {user.username}</p>
         </div>
         <p>Email : {user.email}</p>
-        <Button size="sm">View Profile</Button>
+        <Link to={`/user/${user.id}`}>
+          <Button size="sm">View Profile</Button>
+        </Link>
       </div>
     </>
   );

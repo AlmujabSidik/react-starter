@@ -38,7 +38,7 @@ function UserProfile() {
       setIsLoading(true);
       const response = await axios.get("https://dummyjson.com/users", {
         params: {
-          limit: 9,
+          limit: 15,
         },
       });
 

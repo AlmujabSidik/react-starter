@@ -6,6 +6,7 @@ import StickyNotes from "@/pages/Notes/StickyNotes";
 import Products from "@/pages/Products";
 import Index from "./pages/blog/Index";
 import Lifecycle from "./pages/lifecyle/Lifecycle";
+import SingleUser from "./pages/users/_id";
 
 const App = () => {
   return (
@@ -16,8 +17,9 @@ const App = () => {
         <Route path="/" element={<Homepage />} />
         <Route path="/notes" element={<StickyNotes />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/user" element={<UserProfile />} />
-        <Route path="/blog" element={<Index title={"Blog"} />} />
+        <Route path="/users" element={<UserProfile />} />
+        <Route path="/user/:id" element={<SingleUser />} />
+        <Route path="/blog" element={<Index />} />
         <Route path="/life" element={<Lifecycle />} />
       </Routes>
     </main>

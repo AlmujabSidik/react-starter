@@ -7,7 +7,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const CardBlog = ({ users }) => {
   const formatDate = (dateString) => {
@@ -20,6 +21,7 @@ const CardBlog = ({ users }) => {
     const date = new Date(dateString);
     return date.toLocaleDateString("en-US", options);
   };
+
   return (
     <Card className="flex flex-col justify-between">
       <CardHeader className="p-0">
@@ -33,7 +35,7 @@ const CardBlog = ({ users }) => {
         <CardTitle className="leading-tight">{users?.title}</CardTitle>
         <CardDescription>{users?.description}</CardDescription>
       </CardContent>
-      <CardFooter className="flex flex-col items-start gap-2">
+      <CardFooter className="flex flex-col items-stretch gap-2">
         <p className="text-muted-foreground text-xs">
           Publish : {formatDate(users?.pubDate)}
         </p>

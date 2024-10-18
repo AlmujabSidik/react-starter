@@ -53,11 +53,11 @@ const Header = () => {
               <li>
                 <Link
                   className={`text-sm tracking-tight font-normal hover:text-slate-500 ${
-                    location.pathname === "/user"
+                    location.pathname === "/users"
                       ? "text-muted-foreground"
                       : "text-slate-900"
                   }`}
-                  to={"/user"}
+                  to={"/users"}
                 >
                   Users
                 </Link>
